@@ -77,6 +77,10 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>mkdir $(TargetDir)resources;
+copy $(ProjectDir)resources\DefaultEngineProperties.txt $(TargetDir)resources</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -85,6 +89,10 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>mkdir $(TargetDir)resources;
+copy $(ProjectDir)resources\DefaultEngineProperties.txt $(TargetDir)resources</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -99,6 +107,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PreBuildEvent>
+      <Command>mkdir $(TargetDir)resources;
+copy $(ProjectDir)resources\DefaultEngineProperties.txt $(TargetDir)resources</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -113,8 +125,26 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PreBuildEvent>
+      <Command>mkdir $(TargetDir)resources;
+copy $(ProjectDir)resources\DefaultEngineProperties.txt $(TargetDir)resources</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EngineTester\EngineTester.cpp" />
+    <ClCompile Include="Engine\DefaultEngine.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Test\TemperatureTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineTester\EngineTester.h" />
+    <ClInclude Include="Engine\DefaultEngine.h" />
+    <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Test\TemperatureTest.h" />
+    <ClInclude Include="Test\Test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\DefaultEngineProperties.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

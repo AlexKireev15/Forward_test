@@ -1,17 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Исходные файлы">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{8b01988b-bb08-43fb-bb26-ab66c996c621}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Test">
+      <UniqueIdentifier>{e498be4f-6283-41ae-8cb0-ae7370c93ea4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы ресурсов">
+    <Filter Include="EngineTester">
+      <UniqueIdentifier>{0b13b603-c474-45b9-b7ee-0331a752e540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\DefaultEngine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Test\TemperatureTest.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineTester\EngineTester.cpp">
+      <Filter>EngineTester</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\DefaultEngine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Engine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\TemperatureTest.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Test\Test.h">
+      <Filter>Test</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineTester\EngineTester.h">
+      <Filter>EngineTester</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\DefaultEngineProperties.txt">
+      <Filter>resources</Filter>
+    </Text>
   </ItemGroup>
 </Project>
