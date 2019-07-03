@@ -16,7 +16,7 @@ double calculateY(double x1, double x2, double y1, double y2, double x) {
 }
 
 Data Engine::DefaultEngine::iterate() noexcept {
-	data.V += (double)data.workTime * data.a;
+	data.V += (double) * data.a;
 	unsigned int i;
 	for (i = 1; i < properties.MV.size() - 1; ++i) {
 		if (properties.MV[i - 1].second <= data.V && data.V <= properties.MV[i].second) {
@@ -31,7 +31,7 @@ Data Engine::DefaultEngine::iterate() noexcept {
 	data.Vc = properties.C * (this->ambientTemperature - data.temperature);
 
 	data.temperature += data.Vh;
-	data.temperature -= data.Vc;
+	data.temperature += data.Vc;
 
 	data.workTime += 1;
 	return data;
