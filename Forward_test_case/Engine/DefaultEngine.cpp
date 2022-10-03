@@ -16,7 +16,7 @@ double calculateY(double x1, double x2, double y1, double y2, double x) {
 }
 
 Data Engine::DefaultEngine::iterate() noexcept {
-	data.V += (double) * data.a;
+	data.V += data.a;
 	unsigned int i;
 	for (i = 1; i < properties.MV.size() - 1; ++i) {
 		if (properties.MV[i - 1].second <= data.V && data.V <= properties.MV[i].second) {
@@ -43,6 +43,11 @@ Data Engine::DefaultEngine::getData() noexcept {
 
 Properties Engine::DefaultEngine::getProperties() noexcept {
 	return this->properties;
+}
+
+bool Engine::DefaultEngine::isRelevantCalculation() noexcept
+{
+	return (abs(data.Vc + data.Vh) >= 0.000000000000001 );
 }
 
 void Engine::DefaultEngine::reset() noexcept{

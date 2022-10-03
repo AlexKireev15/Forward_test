@@ -34,6 +34,7 @@ namespace Engine {
 		virtual Data iterate() = 0;
 		virtual Data getData() = 0;
 		virtual Properties getProperties() = 0;
+		virtual bool isRelevantCalculation() = 0;
 		virtual void reset() = 0;
 		virtual ~IEngine() {}
 	};

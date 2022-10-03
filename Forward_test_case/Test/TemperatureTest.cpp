@@ -22,6 +22,8 @@ Engine::Data Test::TemperatureTest::run(const std::string &name, Engine::IEngine
 				"\tCool velocity(C°/sec): " << data.Vc << std::endl <<
 				"\tTemperature(C°): " << data.temperature << std::endl;			
 			data = engine->iterate();
+			if (!engine->isRelevantCalculation())
+				break;
 		}
 		logOut << "Time step " << data.workTime << std::endl <<
 			"\tCrankshaft rotation speed(Rad/sec): " << data.V << std::endl <<

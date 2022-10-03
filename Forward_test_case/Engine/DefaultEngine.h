@@ -27,6 +27,7 @@ namespace Engine {
 		virtual Data iterate() noexcept final;
 		virtual Data getData() noexcept final;
 		virtual Properties getProperties() noexcept final;
+		virtual bool isRelevantCalculation() noexcept final;
 		virtual void reset() noexcept final;
 	};
 }
